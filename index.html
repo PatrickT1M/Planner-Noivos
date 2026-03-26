@@ -3,34 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/css/styles.css">
         <title>Planner Noivos</title>
     </head>
     <body>
         <!-- CABEÇALHO -->
         <header>
-            <p></p>
+            <p>
+                🔥 Oferta por tempo limitado — Apenas R$9,90
+            </p>
         </header>
         <!-- CORPO -->
         <main>
             <section class="hero">
                 <div class="container">
                     <div class="hero--conteudo">
-                        <h1>Planner Noivos</h1>
-                        <p>Planner Noivos</p>
-                        <span>
+                        <h1 class="titulo">Planner Noivos</h1>
+                        <span class="texto--hero">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, explicabo eius blanditiis ex harum quas, eos nesciunt perspiciatis reiciendis, reprehenderit enim. Praesentium magni cum ducimus error unde quo, a repellendus?
                         </span>
                         <div class="img--hero">
                             <img src="src/images/capa.png" alt="">
                         </div>
-                        <button>Casamento dos seus sonhos por R$99,90 →</button>
+                        <button class="btn--compra">Casamento dos seus sonhos por R$99,90 →</button>
+                        <small class="texto--menor">🔒 Pagamento 100% seguro · Acesso imediato</small>
                     </div>
                 </div>
             </section>
             <!-- MOTIVO -->
             <section class="motivo--compra">
                 <div class="container">
-                    <span>Motivo da compra</span>
+                    <span class="titulo--span">Motivo da compra</span>
                     <h2>Você já esteve nessa situação?</h2>
                     <ul class="motivo--motivo">
                         <li>
@@ -56,8 +59,8 @@
             </section>
             <!-- Solução -->
             <section class="solucao--problema">
-                <div class="container">
-                    <span>Solução para o problema</span>
+                <div class="container--sem--fundo">
+                    <span class="titulo--span">Solução para o problema</span>
                     <h2>Planner Noivos</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus. (MOTIVO REAL, EXPLICAR A DOR!)
@@ -96,12 +99,23 @@
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus.
                             </div>
                         </article>
+                        <article class="grid--cards">
+                            <div class="icon--card">
+                                👊
+                            </div>
+                            <div class="titulo--card">
+                                MOTIVO PARA RESOLVER
+                            </div>
+                            <div class="desc--card">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus.
+                            </div>
+                        </article>
                     </div>
                 </div>
                 <p>Planner totalmente interativo e com facil leitura</p>
             </section>
             <!-- BONUS -->
-            <section>
+            <section class="bonus">
                 <div class="container">
                     <h2>Bônus para você!</h2>
                     <p>Na compra do Planner leve nosso ebook de enxoval pela metade do preço!</p>
@@ -110,24 +124,24 @@
                             Bônus inclusos
                         </span>
                         <h3>Enxoval dos Noivos</h3>
-                    </div>
-                    <p class="secao--corpo">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus.
-                    </p>
-                    <ul class="lista--bonus">
-                        <li>TESTE</li>
-                        <li>TESTE</li>
-                        <li>TESTE</li>
-                        <li>TESTE</li>
-                    </ul>
-                    <img src="src/images/enxoval_noivos.png" alt="">
-                    <div class="valor--bonus">
-                        Valor separado: R$50,00 → íncluido na compra fica R$25,00
+                        <p class="secao--corpo">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus.
+                        </p>
+                        <ul class="lista--bonus">
+                            <li>TESTE</li>
+                            <li>TESTE</li>
+                            <li>TESTE</li>
+                            <li>TESTE</li>
+                        </ul>
+                        <img class="enxoval" src="src/images/enxoval_noivos.png" alt="">
+                        <div class="valor--bonus">
+                            Valor separado: R$50,00 → íncluido na compra fica R$25,00
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- Quem são os autores -->
-            <section>
+            <section class="autores">
                 <div class="container">
                     <p>Quem são os autores?</p>
                     <img src="src/images/capa.png" alt="">
@@ -152,67 +166,59 @@
                     <p class="secao--corpo">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus.
                     </p>
-                </div>
-                <div class="preco">
-                    <span class="preco--compo">
-                        Combo COmpleto
-                    </span>
-                    <ul class="preco--incluido">
-                        <li>
-                            <span class="check--icon">✔️</span>
-                            <span>Planner dos Noivos</span>
-                        </li>
-                        <li>
-                            <span class="check--icon">✔️</span>
-                            <span>Enxoval dos Noivos</span>
-                        </li>
-                        <li>
-                            <span class="check--icon">✔️</span>
-                            <span>Acesso imediato após a compra</span>
-                        </li>
-                        <li>
-                            <span class="check--icon">✔️</span>
-                            <span>Garantia de 7 dias - sem prejuizo</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="preco--antigo">
-                    <span class="preco--antigo--texto">
-                        Combo Antigo
-                    </span>
-                    <span class="preco--antigo--valor">
-                        R$ 199,90
-                    </span>
-                    <small>Pagamento único de R$99,90</small>
-                </div>
-                <p class="btn--compra">
-                    Comprar →
-                </p>
-                <div class="autenticao--compra">
-                    <div class="card--verificao">
-                        <div class="icon--verificao">
-                            🛡️
-                        </div>
-                        <div class="texto--verificacao">
-                            Garantia de 7 dias - sem prejuizo
-                        </div>
-                        <div class="icon--verificao">
-                            🔒
-                        </div>
-                        <div class="texto--verificacao">
-                            Pagamento seguro e 100% online
-                        </div>
-                        <div class="icon--verificao">
-                            ⚡
-                        </div>
-                        <div class="texto--verificacao">
-                            Acesso imediato depois da compra
-                        </div>
-                        <div class="icon--verificao">
-                            📱
-                        </div>
-                        <div class="texto--verificacao">
-                            Funciona em qualquer dispositivo
+                    <div class="preco">
+                        <span class="preco--compo">
+                            Combo Completo
+                        </span>
+                        <ul class="preco--incluido">
+                            <li>
+                                <span class="check--icon">✔️</span>
+                                <span>Planner dos Noivos</span>
+                            </li>
+                            <li>
+                                <span class="check--icon">✔️</span>
+                                <span>Enxoval dos Noivos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="preco--antigo">
+                        <span class="preco--antigo--texto">
+                            Combo Antigo
+                        </span>
+                        <span class="preco--antigo--valor">
+                            R$ 199,90
+                        </span>
+                        <small>Pagamento único de R$99,90</small>
+                    </div>
+                    <p class="btn--compra">
+                        Comprar →
+                    </p>
+                    <div class="autenticao--compra">
+                        <div class="card--verificao">
+                            <div class="icon--verificao">
+                                🛡️
+                            </div>
+                            <div class="texto--verificacao">
+                                Garantia de 7 dias - sem prejuizo
+                            </div>
+                            <div class="icon--verificao">
+                                🔒
+                            </div>
+                            <div class="texto--verificacao">
+                                Pagamento seguro e 100% online
+                            </div>
+                            <div class="icon--verificao">
+                                ⚡
+                            </div>
+                            <div class="texto--verificacao">
+                                Acesso imediato depois da compra
+                            </div>
+                            <div class="icon--verificao">
+                                📱
+                            </div>
+                            <div class="texto--verificacao">
+                                Funciona em qualquer dispositivo
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -253,7 +259,7 @@
         <!-- Footer -->
         <footer>
             <p class="footer--texto">
-                Copyright 2022 - Todos os direitos reservados
+                &copy; Copyright 2026 - Todos os direitos reservados
             </p>
         </footer>
         <!-- Barra -->
