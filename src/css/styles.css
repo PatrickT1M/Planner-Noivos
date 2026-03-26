@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Petit+Formal+Script&family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Sua paleta original mantida */
+    --fundo: #ebe9e3;
+    --fundo-alternativo: #3a3a3a;
+    --texto: #2b2b2b;
+    --texto-secundario: #d9d9d9;
+    --botao: #2b2b2b;
+
+    /* Tipografia */
+    --fonte-titulo: 'Petit Formal Script', cursive;
+    --fonte-destaque: 'Anton SC', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+    /* Mantida para textos longos e descrições */
+}
+
+/* =========================================
+   MEDIA QUERIES (Responsividade para Celulares e Tablets)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Reduzindo os espaços em telas menores */
+    section {
+        padding: 50px 0;
+    }
+
+    .hero {
+        padding: 40px 0 50px 0;
+    }
+
+    /* 2. Ajustando a Tipografia (Títulos e Textos) */
+    .hero--conteudo h1 {
+        font-size: 3rem;
+        /* Era 4rem */
+    }
+
+    .texto--hero {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    h2,
+    .motivo--compra h2,
+    .solucao--problema h2,
+    .bonus h2,
+    .secao--compra h2,
+    .autores h2 {
+        font-size: 2rem;
+        /* Era 2.5rem */
+        margin-bottom: 30px;
+    }
+
+    /* 3. Ajustes nos Cards e Bônus */
+    .card--bonus {
+        padding: 25px 15px;
+    }
+
+    .card--bonus h3 {
+        font-size: 1.5rem;
+    }
+
+    .motivo--motivo li {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* 4. Ajustes na Área de Compra (Se você adicionou o código extra que mandei antes) */
+    .secao--titulo span {
+        font-size: 3rem;
+        /* Preço principal menor */
+    }
+
+    .preco {
+        padding: 20px 15px;
+    }
+
+    .preco--incluido li {
+        font-size: 1rem;
+    }
+
+    .autenticao--compra {
+        flex-direction: column;
+        /* Coloca os selos de garantia um embaixo do outro */
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* 5. Ajustes na Barra Fixada (Rodapé do Mobile) */
+    .barra--fixada {
+        padding: 10px 15px;
+    }
+
+    .barra--fixada .preco--novo {
+        font-size: 1.2rem;
+        /* Preço menor para caber do lado do botão */
+    }
+
+    .barra--fixada .btn--compra {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 0;
+    }
+}
+
+/* Ajuste extra para celulares muito pequenos (ex: iPhone SE) */
+@media (max-width: 400px) {
+    .hero--conteudo h1 {
+        font-size: 2.5rem;
+    }
+
+    .barra--fixada .btn--compra {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+header {
+    background-color: var(--fundo-alternativo);
+    padding: 10px 0;
+    color: var(--texto-secundario);
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTAINERS E ESTRUTURA GERAL
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+    /* Respiro entre as seções */
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+    background-color: var(--fundo);
+    text-align: center;
+    padding: 60px 0 80px 0;
+}
+
+.hero--conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero--conteudo h1 {
+    font-size: 4rem;
+    font-family: var(--fonte-titulo);
+    color: var(--texto);
+    margin-bottom: 10px;
+}
+
+.texto--hero {
+    font-size: 1.2rem;
+    color: var(--texto);
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.img--hero img {
+    width: 100%;
+    max-width: 450px;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* =========================================
+   BOTÕES GERAIS
+   ========================================= */
+.btn--compra {
+    display: inline-block;
+    background-color: var(--botao);
+    color: var(--texto-secundario);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: var(--fonte-destaque);
+    font-size: 1.5rem;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn--compra:hover {
+    background-color: var(--fundo-alternativo);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.texto--menor {
+    font-size: 0.85rem;
+    color: var(--texto);
+    display: block;
+}
+
+/* =========================================
+   MOTIVO DA COMPRA & SOLUÇÕES
+   ========================================= */
+.titulo--span {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-secundario);
+    margin-bottom: 10px;
+}
+
+.motivo--compra,
+.solucao--problema,
+.bonus,
+.autores,
+.secao--compra {
+    text-align: center;
+}
+
+/* Alternando as cores de fundo com base na sua paleta */
+.motivo--compra,
+.bonus,
+.secao--compra {
+    background-color: var(--fundo-alternativo);
+    color: var(--texto-secundario);
+}
+
+.solucao--problema,
+.autores {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+/* Títulos das seções escuras */
+.motivo--compra h2,
+.bonus h2,
+.secao--compra h2 {
+    font-size: 2.5rem;
+    font-family: var(--fonte-titulo);
+    color: var(--texto-secundario);
+    margin-bottom: 40px;
+}
+
+/* Títulos das seções claras */
+.solucao--problema h2,
+.autores h2 {
+    font-size: 2.5rem;
+    font-family: var(--fonte-titulo);
+    color: var(--texto);
+    margin-bottom: 40px;
+}
+
+/* Lista de motivos */
+.motivo--motivo {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+}
+
+.motivo--motivo li {
+    background-color: var(--texto);
+    color: var(--texto-secundario);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid var(--fundo);
+}
+
+/* =========================================
+   CARDS DE SOLUÇÃO (GRID)
+   ========================================= */
+/* Ajuste para os cards não grudarem na tela no mobile */
+.grid--solucoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    /* Força 1 card por linha no celular */
+    gap: 20px;
+    padding: 0 10px;
+    /* Garante uma margem de segurança lateral */
+    width: 100%;
+}
+
+.grid--cards {
+    background-color: var(--fundo-alternativo);
+    color: var(--texto-secundario);
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 1.5s ease;
+    border: 1px solid var(--texto);
+    margin-bottom: 10px;
+}
+
+.grid--cards:hover {
+    transform: translateY(-5px);
+    background-color: var(--botao);
+}
+
+.icon--card {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.titulo--card {
+    font-size: 1.2rem;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 10px;
+}
+
+.desc--card {
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   BÔNUS E AUTORES
+   ========================================= */
+.card--bonus {
+    background-color: var(--fundo);
+    color: var(--texto);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card--bonus h3 {
+    font-family: var(--fonte-destaque);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.enxoval {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.autores img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 50%;
+    border: 3px solid var(--fundo-alternativo);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   SEÇÃO DE COMPRA E PREÇOS
+   ========================================= */
+.secao--compra {
+    padding: 60px 0;
+    /* Mais espaço para dar foco na oferta */
+}
+
+.secao--titulo span {
+    display: block;
+    font-size: 4rem;
+    font-family: var(--fonte-texto);
+    color: #ffd700;
+    /* Exemplo de um dourado para destacar o preço */
+    margin: 10px 0;
+}
+
+/* O Box principal da oferta */
+.preco {
+    background-color: var(--fundo);
+    color: var(--texto);
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ffd700;
+    /* Borda destacando que é a melhor opção */
+}
+
+.preco--compo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.preco--incluido {
+    list-style: none;
+    /* Tira as bolinhas padrão */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.preco--incluido li {
+    font-family: sans-serif;
+    /* Fonte mais limpa para leitura */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre o check e o texto */
+}
+
+.preco--antigo {
+    margin: 20px 0;
+}
+
+.preco--antigo--texto {
+    display: block;
+    font-size: 1rem;
+}
+
+.preco--antigo--valor {
+    text-decoration: line-through;
+    /* Risco no preço antigo */
+    color: #ff4d4d;
+    /* Cor de erro/antigo */
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Ícones de Autenticação (Gatilho de Segurança) */
+.autenticao--compra {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card--verificao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+}
+
+/* =========================================
+   RODAPÉ E GARANTIA
+   ========================================= */
+footer {
+    background-color: #1a1a1a;
+    color: var(--texto-secundario);
+    text-align: center;
+    padding: 30px 20px 100px 20px;
+    /* Espaço extra embaixo por causa da barra fixa */
+}
+
+/* =========================================
+   BARRA FIXADA (Excelente para conversão Mobile)
+   ========================================= */
+.barra--fixada {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--fundo);
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5%;
+    gap: 15%;
+    z-index: 1000;
+    /* Garante que fique por cima de tudo */
+}
+
+.barra--preco {
+    color: var(--texto);
+    font-family: var(--fonte-texto);
+}
+
+.barra--fixada .preco--antigo {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #888;
+    margin: 0;
+    /* Sobrescreve a margem anterior */
+}
+
+.barra--fixada .preco--novo {
+    font-size: 1.5rem;
+    color: #2b2b2b;
+}
+
+.barra--fixada .btn--compra {
+    margin: 0;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: var(--fundo-alternativo);
+    /* Verde converte muito bem */
+    color: #fff;
+    box-shadow: 0px 4px 10px var(--fundo-alternativo);
+}
