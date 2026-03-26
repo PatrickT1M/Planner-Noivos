@@ -141,6 +141,41 @@ header {
     font-weight: 600;
 }
 
+header p {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: deslizarTexto 15s linear infinite;
+}
+
+header p span {
+    display: inline-block;
+    animation: piscar ease-in-out 1s infinite;
+}
+
+@keyframes deslizarTexto {
+    0% {
+        transform: translateX(750px);
+    }
+
+    100% {
+        transform: translateX(-750px);
+    }
+}
+
+
+@keyframes piscar {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .7
+    }
+}
+
 /* =========================================
    CONTAINERS E ESTRUTURA GERAL
    ========================================= */
